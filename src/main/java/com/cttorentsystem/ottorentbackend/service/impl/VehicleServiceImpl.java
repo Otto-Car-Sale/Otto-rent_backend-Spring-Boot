@@ -1,14 +1,21 @@
 package com.cttorentsystem.ottorentbackend.service.impl;
 
+import com.cttorentsystem.ottorentbackend.controllers.EmailController;
 import com.cttorentsystem.ottorentbackend.dtos.VehicleDto;
+import com.cttorentsystem.ottorentbackend.entity.ServiceDetails;
 import com.cttorentsystem.ottorentbackend.entity.Vehicle;
 import com.cttorentsystem.ottorentbackend.exception.ResourceNotFoundException;
 import com.cttorentsystem.ottorentbackend.mapper.VehicleMapper;
 import com.cttorentsystem.ottorentbackend.repositorys.VehicleReporsitory;
+import com.cttorentsystem.ottorentbackend.service.EmailService;
 import com.cttorentsystem.ottorentbackend.service.VehicleService;
 import lombok.AllArgsConstructor;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import static com.cttorentsystem.ottorentbackend.mapper.VehicleMapper.mapToPhotoList;
@@ -17,7 +24,9 @@ import static com.cttorentsystem.ottorentbackend.mapper.VehicleMapper.mapToPhoto
 @AllArgsConstructor
 public class VehicleServiceImpl implements VehicleService {
 
-      private VehicleReporsitory vehicleReporsitory;
+    private VehicleReporsitory vehicleReporsitory;
+
+
 
     @Override
     public VehicleDto createVehicle(VehicleDto vehicleDto) {
@@ -55,6 +64,7 @@ public class VehicleServiceImpl implements VehicleService {
                 new ResourceNotFoundException("Vehicle not found with id : " + vehicleId));
 
         vehicle.setChassisNumber(vehicleDto.getChassisNumber());
+        vehicle.setRegistrationNo(vehicleDto.getRegistrationNo());
         vehicle.setEngineNo(vehicleDto.getEngineNo());
         vehicle.setVehiclePrice(vehicleDto.getVehiclePrice());
         vehicle.setVehicleState(vehicleDto.getVehicleState());
@@ -106,6 +116,11 @@ public class VehicleServiceImpl implements VehicleService {
 
 
     }
+
+
+
+
+
 
 
 }

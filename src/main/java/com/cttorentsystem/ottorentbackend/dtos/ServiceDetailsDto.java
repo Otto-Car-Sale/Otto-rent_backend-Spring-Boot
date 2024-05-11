@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.List;
 public class ServiceDetailsDto {
 
     private Long serviceDetailsId;
-    private Date serviceDate;
+    private LocalDate serviceDate;
     private String serviceCenterName;
     private String serviceCenterLocation;
     private  String travelDistance;
@@ -31,7 +32,7 @@ public class ServiceDetailsDto {
     private List<ChangedPart> changedParts = new ArrayList<>();
     private String driverName;
     private String driverPhone;
-    private String nextServiceDate;
+    private LocalDate nextServiceDate;
     private  String nextServiceDistance;
 
 

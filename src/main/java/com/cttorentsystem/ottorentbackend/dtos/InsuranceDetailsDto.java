@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -24,7 +25,7 @@ public class InsuranceDetailsDto {
     private Vehicle vehicleDetails;
     private String premiumAmount;
     private String policyExclusions;
-    private Date renewalDate;
+    private LocalDate renewalDate;
     private String contactNumber;
     private String claimProcess;
 }

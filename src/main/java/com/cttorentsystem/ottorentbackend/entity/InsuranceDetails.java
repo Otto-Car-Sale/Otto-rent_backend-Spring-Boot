@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -30,7 +31,7 @@ public class InsuranceDetails {
     private Vehicle vehicleDetails; // The vehicle associated with these insurance details.
     private String premiumAmount; // Cost of the insurance premium.
     private String policyExclusions; // Details of what is not covered by the insurance policy.
-    private Date renewalDate; // Date by which the insurance policy needs to be renewed.
+    private LocalDate renewalDate; // Date by which the insurance policy needs to be renewed.
     private String contactNumber; // Contact number for inquiries or claims.
     private String claimProcess; // Information on how to file a claim.
 

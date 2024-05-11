@@ -17,6 +17,7 @@ public class VehicleDto {
 
 
     private Long vehicleId;
+    private String registrationNo;
     private String vehiclePrice;
     private String chassisNumber;
     private String engineNo;
@@ -40,9 +41,6 @@ public class VehicleDto {
     private List<Licence> licenses = new ArrayList<>();
     private List<ServiceDetails> serviceDetails = new ArrayList<>();
     private List<InsuranceDetails> insuranceDetails = new ArrayList<>();
-
-
-
 
     // Embedded class for Dimensions
     @Getter

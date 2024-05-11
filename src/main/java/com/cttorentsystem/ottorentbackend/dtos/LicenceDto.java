@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -18,8 +19,8 @@ public class LicenceDto {
     private Long licenceId;
     private Vehicle vehicleId;
     private String licenseNumber;
-    private Date expiryDate;
-    private Date issueDate;
+    private LocalDate expiryDate;
+    private LocalDate  issueDate;
     private String issueProvince;
 
 }

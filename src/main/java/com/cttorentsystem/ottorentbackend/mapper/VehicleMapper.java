@@ -12,6 +12,7 @@ public class VehicleMapper {
         VehicleDto dto = new VehicleDto();
 
         dto.setVehicleId(vehicle.getVehicleId());
+        dto.setRegistrationNo(vehicle.getRegistrationNo());
         dto.setVehiclePrice(vehicle.getVehiclePrice());
         dto.setChassisNumber(vehicle.getChassisNumber());
         dto.setEngineNo(vehicle.getEngineNo());
@@ -52,6 +53,7 @@ public class VehicleMapper {
         Vehicle vehicle = new Vehicle();
 
         vehicle.setVehicleId(dto.getVehicleId());
+        vehicle.setRegistrationNo(dto.getRegistrationNo());
         vehicle.setVehiclePrice(dto.getVehiclePrice());
         vehicle.setChassisNumber(dto.getChassisNumber());
         vehicle.setEngineNo(dto.getEngineNo());

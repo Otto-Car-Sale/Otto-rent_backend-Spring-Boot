@@ -49,7 +49,7 @@ public class User {
 
 
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "customer", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Order> orders = new ArrayList<>();
 
